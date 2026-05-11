@@ -1,25 +1,29 @@
 {
   "name": "secrets-detector",
-  "displayName": "🔐 Secrets Detector",
+  "displayName": "Secrets Detector",
   "description": "Detects hardcoded secrets, API keys and passwords in your code",
-  "version": "0.0.1",
-  "publisher": "publisher-id",
-  "engines": {
+ "version": "0.0.2",
+"publisher": "MinhajIslam",
+  "engines": { 
     "vscode": "^1.80.0"
   },
   "categories": [
     "Linters",
     "Other"
   ],
-  "activationEvents": [
-    "onStartupFinished"
-  ],
+  "icon": "images/icon.png",
+ "activationEvents": [
+  "onCommand:secretsDetector.scanSecrets",
+  "onLanguage:javascript",
+  "onLanguage:typescript",
+  "workspaceContains:**/*.env"
+],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "secrets-detector.scan",
-        "title": "🔐 Scan for Secrets"
+        "title": " Scan for Secrets"
       }
     ]
   },
