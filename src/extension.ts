@@ -128,7 +128,7 @@ export function activate(context: vscode.ExtensionContext) {
 
     if (diagnostics.length > 0) {
       vscode.window.showWarningMessage(
-        `🔐 Secrets Detector: ${diagnostics.length} secret(s) found in ${document.fileName.split("\\").pop()}!`
+        ` Secrets Detector: ${diagnostics.length} secret(s) found in ${document.fileName.split("\\").pop()}!`
       );
     }
   };
